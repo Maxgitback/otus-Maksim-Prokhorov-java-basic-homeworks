@@ -8,7 +8,7 @@ public class MainApp {
         checkSign(1,2, 5);
         selectColor();
         compareNumbers();
-        addOrSubtractAndPrint(3,6,true);
+        addOrSubtractAndPrint(3,6,false);
 
     }
 
@@ -28,12 +28,12 @@ public class MainApp {
     }
 
     public static void selectColor() {
-        int data = 10;
+        int data = 21;
         if (data <= 10) { // Если data меньше 10 включительно, то в консоль должно быть выведено сообщение “Красный”
             System.out.println(" Красный ");
-        } else if (data >= 11 && data <= 20) { // если от 10 до 20 включительно, то “Желтый”
+        } else if (data <= 20) { // если от 10 до 20 включительно, то “Желтый”
             System.out.println(" Желтый ");
-        } else if (data >= 21) { // если больше 20 - “Зеленый”
+        } else { // если больше 20 - “Зеленый”
             System.out.println(" Зеленый ");
             
         }
@@ -52,7 +52,7 @@ public class MainApp {
     }
 
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
-        if (increment = true) {
+        if (increment == true) {
             System.out.println(initValue + delta + " - результат сложения ");
         } else {
             System.out.println(initValue - delta + " - результат вычитания ");
