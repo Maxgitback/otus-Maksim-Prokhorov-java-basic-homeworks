@@ -11,11 +11,11 @@ public class Lesson7 {
         diagonalLine(array, '_');
         int result1 = findMax(arr);
         System.out.println("findMax = " + result1);
-        int result2 = sumElements2String(arr);
+        int result2 = sumElementsSecondLine(arr);
         System.out.println("sumElements2String = " + result2);
     }
 
-    public static int sumElements2String(int[][] arr) {
+    public static int sumElementsSecondLine(int[][] arr) {
         int sum = 0;
         for (int i = 1; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -26,7 +26,7 @@ public class Lesson7 {
     }
 
     public static int findMax(int[][] arr) {
-        int max = 0;
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 if (max < arr[i][j]) {
@@ -40,10 +40,8 @@ public class Lesson7 {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 array[i][j] = value;
-                if (i == j) {
-                    System.out.print('*' + " ");
-                } else if (i + j == array.length - 1) {
-                    System.out.print('*' + " ");
+                if (i == j || i + j == array.length - 1) {
+                    System.out.print('*');
                 } else {
                     System.out.print(array[i][j] + " ");
                 }
@@ -60,15 +58,15 @@ public class Lesson7 {
         }
     }
     public static int sumOfPositiveElements(int[][] arr) {
-        int counter = 0;
+        int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 if (arr[i][j] > 0) {
-                    counter++;
+                    sum++;
                 }
             }
 
         }
-        return counter;
+        return sum;
     }
 }
