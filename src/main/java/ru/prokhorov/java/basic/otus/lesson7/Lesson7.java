@@ -16,6 +16,9 @@ public class Lesson7 {
     }
 
     public static int sumElementsSecondLine(int[][] arr) {
+        if (arr.length < 2){
+            return -1;
+        }
         int sum = 0;
         for (int i = 1; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -52,7 +55,7 @@ public class Lesson7 {
     public static void squareStar(int size) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.print("*" + " ");
+                System.out.print("* " + " ");
             }
             System.out.println();
         }
